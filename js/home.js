@@ -43,6 +43,12 @@ document
         noakhaliNewBalance;
 
       document.getElementById("total-balance").innerText = newtotalBalance;
+      //   <---add to donation history--->
+      const p = document.createElement("p");
+      p.innerText = `
+    Donated ${addMoney} for Noakhali
+    `;
+      document.getElementById("donation-container").appendChild(p);
     }
     document.getElementById("noakhali-donation-input-field").value = "";
   });
@@ -67,14 +73,8 @@ document
       document.getElementById("total-feni-balance").innerText = feniNewBalance;
 
       document.getElementById("total-balance").innerText = newTotalBalance;
-      //   <---add to donation history--->
     }
     document.getElementById("feni-donation-input-field").value = "";
-    // const p = document.createElement("p");
-    // p.innerText = `
-    // Donated ${addMoney} for Noakhali
-    // `;
-    // console.log(p);
   });
 
 // feni donation part end
