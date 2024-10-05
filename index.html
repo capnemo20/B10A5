@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Donate Bangladesh</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
       rel="stylesheet"
@@ -36,25 +36,135 @@
             tabindex="0"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li><a>Item 1</a></li>
-            
+            <li><a>Donate Bangladesh</a></li>
           </ul>
         </div>
         <a class="btn btn-ghost text-xl bg-blue-600 text-white">Blog</a>
       </div>
       <div class="navbar-center lg:flex">
-        <img src="./images/logo.png" alt="">
+        <img src="./images/logo.png" alt="" />
         <h3 class="ml-2">Donate Bangladesh</h3>
       </div>
       <div class="navbar-end display-flex">
-        <img src="./images/coin.png" alt="">
-        <h3> 10500 BDT</h3>
+        <img src="./images/coin.png" alt="" />
+        <h3 id="total-balance">10500 BDT</h3>
       </div>
     </div>
     <!-- navbar ends -->
 
-    <!-- js files -->
+    <!--header center buttons start -->
+    <header class="flex justify-center mt-10 gap-4">
+      <button class="btn btn-success">Donation</button>
+      <button class="btn btn-active">History</button>
+    </header>
+    <!--header center buttons end -->
 
+    <!--------- cards ------------->
+    <main class="mt-1">
+      <!-- card-1 start-->
+      <div
+        class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
+      >
+        <div>
+          <img src="./images/noakhali.png" alt="" />
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="flex">
+              <img class="h-6" src="./images/coin.png" alt="" />
+              <h2 id="total-noakhali-balance">0 BDT</h2>
+            </div>
+            <h2 class="card-title">Donate for Flood at <span id="nokhali-donation">Noakhali</span> , Bangladesh</h2>
+            <p>
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <input
+            id="noakhali-donation-input-field"
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered input-success w-full mt-2"
+            />
+            <button id="donate-noakhali-btn" class="btn btn-block btn-accent text-lg mt-2">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- card-1 end-->
+
+      <!-- card-2 start-->
+      <div
+        class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
+      >
+        <div>
+          <img src="./images/feni.png" alt="" />
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="flex">
+              <img class="h-6" src="./images/coin.png" alt="" />
+              <h2 id="total-feni-balance">0 BDT</h2>
+            </div>
+            <h2 class="card-title">Donate for Flood Relief in <span id="feni-donation">Feni</span> ,Bangladesh</h2>
+            <p>
+                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+            </p>
+            <input
+            id="feni-donation-input-field"
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered input-success w-full mt-2"
+            />
+            <button id="donate-feni-btn" class="btn btn-block btn-accent text-lg mt-2">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- card-2 end-->
+
+      <!-- card-3 start-->
+      <div
+        class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
+      >
+        <div>
+          <img src="./images/quota-protest.png" alt="" />
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="flex">
+              <img class="h-6" src="./images/coin.png" alt="" />
+              <h2 id="total-quota-movement-balance">0 BDT</h2>
+            </div>
+            <h2 class="card-title">Aid for Injured in the <span id="quota-movement-donation">Quota Movement</span></h2>
+            <p>
+                The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+            </p>
+            <input
+            id="quota-movement-donation-input-field"
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered input-success w-full mt-2"
+            />
+            <button id="donate-quota-movement-btn" class="btn btn-block btn-accent text-lg mt-2">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- card-3 end-->
+    </main>
+    <!--------- cards ------------->
+
+    <!-- js files -->
+    <script src="./js/home.js"></script>
+    <script src="./js/utilities.js"></script>
     <!-- js files -->
   </body>
 </html>
