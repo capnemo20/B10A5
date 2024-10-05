@@ -12,55 +12,59 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- navbar starts -->
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <section class="sticky top-0 z-40 bg-slate-200">
+      <!-- navbar starts -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+              <li><a>Donate Bangladesh</a></li>
+            </ul>
           </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li><a>Donate Bangladesh</a></li>
-          </ul>
+          <a class="btn btn-ghost text-xl bg-blue-600 text-white">Blog</a>
         </div>
-        <a class="btn btn-ghost text-xl bg-blue-600 text-white">Blog</a>
+        <div class="navbar-center lg:flex">
+          <img src="./images/logo.png" alt="" />
+          <h3 class="ml-2">Donate Bangladesh</h3>
+        </div>
+        <div class="navbar-end display-flex">
+          <img src="./images/coin.png" alt="" />
+          <h3 id="total-balance">10500 BDT</h3>
+        </div>
       </div>
-      <div class="navbar-center lg:flex">
-        <img src="./images/logo.png" alt="" />
-        <h3 class="ml-2">Donate Bangladesh</h3>
-      </div>
-      <div class="navbar-end display-flex">
-        <img src="./images/coin.png" alt="" />
-        <h3 id="total-balance">10500 BDT</h3>
-      </div>
-    </div>
-    <!-- navbar ends -->
+      <!-- navbar ends -->
 
-    <!--header center buttons start -->
-    <header class="flex justify-center mt-10 gap-4">
-      <button class="btn btn-success">Donation</button>
-      <button class="btn btn-active">History</button>
-    </header>
-    <!--header center buttons end -->
+      <!--header center buttons start -->
+      <header class="flex justify-center mt-10 gap-4 pb-10">
+        <button id="main-donation-btn" class="btn btn-success">Donation</button>
+        <button id="donation-history-btn" class="btn btn-active">
+          History
+        </button>
+      </header>
+      <!--header center buttons end -->
+    </section>
 
     <!--------- cards ------------->
-    <main class="mt-1">
+    <main id="main-section" class="mt-1 active">
       <!-- card-1 start-->
       <div
         class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
@@ -74,8 +78,11 @@
               <img class="h-6" src="./images/coin.png" alt="" />
               <h2 id="total-noakhali-balance">0 BDT</h2>
             </div>
-            <h2 class="card-title">Donate for Flood at <span id="nokhali-donation">Noakhali</span> , Bangladesh</h2>
-            <p>
+            <h2 class="card-title">
+              Donate for Flood at <span id="nokhali-donation">Noakhali</span> ,
+              Bangladesh
+            </h2>
+            <p >
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
               supplies and to those affected by this disaster. Every
@@ -84,12 +91,15 @@
               lives of those in need.
             </p>
             <input
-            id="noakhali-donation-input-field"
+              id="noakhali-donation-input-field"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-success w-full mt-2"
             />
-            <button id="donate-noakhali-btn" class="btn btn-block btn-accent text-lg mt-2">
+            <button
+              id="donate-noakhali-btn"
+              class="btn btn-block btn-accent text-lg mt-2"
+            >
               Donate Now
             </button>
           </div>
@@ -111,17 +121,30 @@
               <img class="h-6" src="./images/coin.png" alt="" />
               <h2 id="total-feni-balance">0 BDT</h2>
             </div>
-            <h2 class="card-title">Donate for Flood Relief in <span id="feni-donation">Feni</span> ,Bangladesh</h2>
+            <h2 class="card-title">
+              Donate for Flood Relief in
+              <span id="feni-donation">Feni</span> ,Bangladesh
+            </h2>
             <p>
-                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
             </p>
             <input
-            id="feni-donation-input-field"
+              id="feni-donation-input-field"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-success w-full mt-2"
             />
-            <button id="donate-feni-btn" class="btn btn-block btn-accent text-lg mt-2">
+            <button
+              id="donate-feni-btn"
+              class="btn btn-block btn-accent text-lg mt-2"
+            >
               Donate Now
             </button>
           </div>
@@ -142,17 +165,31 @@
               <img class="h-6" src="./images/coin.png" alt="" />
               <h2 id="total-quota-movement-balance">0 BDT</h2>
             </div>
-            <h2 class="card-title">Aid for Injured in the <span id="quota-movement-donation">Quota Movement</span></h2>
+            <h2 class="card-title">
+              Aid for Injured in the
+              <span id="quota-movement-donation">Quota Movement</span>
+            </h2>
             <p>
-                The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
             </p>
             <input
-            id="quota-movement-donation-input-field"
+              id="quota-movement-donation-input-field"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-success w-full mt-2"
             />
-            <button id="donate-quota-movement-btn" class="btn btn-block btn-accent text-lg mt-2">
+            <button
+              id="donate-quota-movement-btn"
+              class="btn btn-block btn-accent text-lg mt-2"
+            >
               Donate Now
             </button>
           </div>
@@ -161,10 +198,19 @@
       <!-- card-3 end-->
     </main>
     <!--------- cards ------------->
+    <!-- history section -->
+    <section id="history-section-details" class="hidden">
+        <h1>Donation History</h1>
+        <div id="donation-container">
+            
+        </div>
+    </section>
+     <!-- history section -->
 
     <!-- js files -->
     <script src="./js/home.js"></script>
     <script src="./js/utilities.js"></script>
+    <script src="./js/history.js"></script>
     <!-- js files -->
   </body>
 </html>

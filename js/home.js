@@ -6,15 +6,35 @@ document
     event.preventDefault();
 
     const addMoney = getInputFieldValueById("noakhali-donation-input-field");
+    const initialMoneyAmount = getTextFieldValueById("total-balance");
 
     // const hasLetters = /[a-zA-Z]/.test(addMoney);
     // const hasNumbers = /[0-9]/.test(addMoney);
     // const isNumber = /^[0-9]+$/.test(addMoney);
-    if (!addMoney) {
+    if (isNaN(addMoney) || addMoney < 1 || addMoney > initialMoneyAmount) {
       alert("Please enter a valid amount");
       return;
     } else {
+      // alert money added successfully
       alert("money added successfully");
+      // <------modal for adding money successfully start------->
+      //   const modalForAddingMoney = document.createElement("div");
+      //   modalForAddingMoney.classList.add("modal");
+      //   modalForAddingMoney.innerHTML = `
+      //    <div class="modal-box">
+      //         <h3 class="text-lg font-bold">Hello!</h3>
+      //         <p class="py-4">This modal works with a hidden checkbox!</p>
+      //         <div class="modal-action">
+      //             <label for="my_modal_6" class="btn">Close!</label>
+      // </div>
+
+      // `;
+      //   document
+      //     .getElementById("donate-noakhali-btn")
+      //     .appendChild(modalForAddingMoney);
+
+      // <------modal for adding money successfully end--------->
+
       const noakhaliBalance = getTextFieldValueById("total-noakhali-balance");
       const noakhaliNewBalance = addMoney + noakhaliBalance;
       const totalBalance = getTextFieldValueById("total-balance");
@@ -34,7 +54,8 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     const addMoney = getInputFieldValueById("feni-donation-input-field");
-    if (!addMoney) {
+    const initialMoneyAmount = getTextFieldValueById("total-balance");
+    if (isNaN(addMoney) || addMoney < 1 || addMoney > initialMoneyAmount) {
       alert("Please enter a valid amount");
       return;
     } else {
@@ -46,8 +67,14 @@ document
       document.getElementById("total-feni-balance").innerText = feniNewBalance;
 
       document.getElementById("total-balance").innerText = newTotalBalance;
+      //   <---add to donation history--->
     }
     document.getElementById("feni-donation-input-field").value = "";
+    // const p = document.createElement("p");
+    // p.innerText = `
+    // Donated ${addMoney} for Noakhali
+    // `;
+    // console.log(p);
   });
 
 // feni donation part end
@@ -60,7 +87,8 @@ document
     const addMoney = getInputFieldValueById(
       "quota-movement-donation-input-field"
     );
-    if (!addMoney) {
+    const initialMoneyAmount = getTextFieldValueById("total-balance");
+    if (isNaN(addMoney) || addMoney < 1 || addMoney > initialMoneyAmount) {
       alert("Please enter a valid amount");
       return;
     } else {
