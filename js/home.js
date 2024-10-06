@@ -5,6 +5,12 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
 
+    function getDateTime() {
+      const now = new Date();
+      return now.toLocaleString(); // Formats the date and time as a string
+    }
+    const placeName = "Noakhali";
+
     const addMoney = getInputFieldValueById("noakhali-donation-input-field");
     const initialMoneyAmount = getTextFieldValueById("total-balance");
 
@@ -46,7 +52,7 @@ document
       //   <---add to donation history--->
       const p = document.createElement("p");
       p.innerText = `
-    Donated ${addMoney} for Noakhali
+    Donated ${addMoney} for  ${placeName} at ${getDateTime()}
     `;
       document.getElementById("donation-container").appendChild(p);
     }
@@ -59,6 +65,7 @@ document
   .getElementById("donate-feni-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
+    const placeName = "Feni";
     const addMoney = getInputFieldValueById("feni-donation-input-field");
     const initialMoneyAmount = getTextFieldValueById("total-balance");
     if (isNaN(addMoney) || addMoney < 1 || addMoney > initialMoneyAmount) {
@@ -73,6 +80,12 @@ document
       document.getElementById("total-feni-balance").innerText = feniNewBalance;
 
       document.getElementById("total-balance").innerText = newTotalBalance;
+      //   <---add to donation history--->
+      const p = document.createElement("p");
+      p.innerText = `
+    Donated ${addMoney} for  ${placeName} at ${getDateTime()}
+    `;
+      document.getElementById("donation-container").appendChild(p);
     }
     document.getElementById("feni-donation-input-field").value = "";
   });
@@ -88,6 +101,7 @@ document
       "quota-movement-donation-input-field"
     );
     const initialMoneyAmount = getTextFieldValueById("total-balance");
+    const placeName = "Quota Movement";
     if (isNaN(addMoney) || addMoney < 1 || addMoney > initialMoneyAmount) {
       alert("Please enter a valid amount");
       return;
@@ -103,6 +117,12 @@ document
         quotaMovementNewBalance;
 
       document.getElementById("total-balance").innerText = newTotalBalance;
+      //   <---add to donation history--->
+      const p = document.createElement("p");
+      p.innerText = `
+    Donated ${addMoney} for  ${placeName} at ${getDateTime()}
+    `;
+      document.getElementById("donation-container").appendChild(p);
     }
     document.getElementById("quota-movement-donation-input-field").value = "";
   });
