@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section>
+      <div
+        class="btn btn-primary text-lg"
+        onclick="window.location.href = 'index.html'"
+      >
+        Home
+      </div>
+    </section>
+    <main class="mt-6">
+      <h1 class="text-lg text-blue-400">Important FAQ</h1>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is DOM?</div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is a programming interface that
+            represents the structure of an HTML or XML document as a tree of
+            objects. Each element, attribute, and text within the document is
+            represented as a node, allowing developers to access, manipulate,
+            and update the content and structure of a webpage using languages
+            like JavaScript. The DOM provides a way for scripts to dynamically
+            interact with the content of a document, enabling features like
+            updates, animations, and interactive elements.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is the purpose of DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The purpose of the Document Object Model (DOM) is to provide a
+            structured representation of a web document, enabling scripts and
+            programming languages to interact with and manipulate the document's
+            content and structure dynamically. It allows developers to create,
+            modify, and delete elements, attributes, and text within the
+            document, facilitating real-time updates and interactivity.
+            Additionally, the DOM serves as a bridge between the webpage's HTML
+            structure and the scripting languages, enhancing the user experience
+            through dynamic content changes.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is the difference between querySelector() and getElementById()?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The querySelector() method selects the first element that matches a
+            specified CSS selector, allowing for greater flexibility in
+            selecting elements by class, tag, or attribute. In contrast,
+            getElementById() specifically targets an element with a unique ID,
+            returning a single element directly. While querySelector() can
+            return any element, getElementById() is optimized for retrieving
+            elements by their ID, making it faster in that specific use case.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Why DOM is important?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The DOM (Document Object Model) is important because it provides a
+            structured representation of the HTML document, allowing developers
+            to programmatically access and manipulate the content, structure,
+            and style of web pages. This dynamic interaction enables the
+            creation of responsive and interactive user experiences.
+            Additionally, the DOM serves as the bridge between JavaScript and
+            HTML, facilitating real-time updates without needing to reload the
+            entire page.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

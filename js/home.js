@@ -51,9 +51,13 @@ document
       document.getElementById("total-balance").innerText = newtotalBalance;
       //   <---add to donation history--->
       const p = document.createElement("p");
+
       p.innerText = `
     Donated ${addMoney} for  ${placeName} at ${getDateTime()}
     `;
+      p.style.height = "70px";
+      p.style.border = "1px solid #F0DBDB";
+      p.style.marginTop = "10px";
       document.getElementById("donation-container").appendChild(p);
     }
     document.getElementById("noakhali-donation-input-field").value = "";
@@ -85,6 +89,9 @@ document
       p.innerText = `
     Donated ${addMoney} for  ${placeName} at ${getDateTime()}
     `;
+      p.style.height = "70px";
+      p.style.border = "1px solid #F0DBDB";
+      p.style.marginTop = "10px";
       document.getElementById("donation-container").appendChild(p);
     }
     document.getElementById("feni-donation-input-field").value = "";
@@ -122,6 +129,9 @@ document
       p.innerText = `
     Donated ${addMoney} for  ${placeName} at ${getDateTime()}
     `;
+      p.style.height = "70px";
+      p.style.border = "1px solid #F0DBDB";
+      p.style.marginTop = "10px";
       document.getElementById("donation-container").appendChild(p);
     }
     document.getElementById("quota-movement-donation-input-field").value = "";
