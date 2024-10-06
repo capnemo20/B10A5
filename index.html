@@ -14,7 +14,9 @@
   <body>
     <section class="sticky top-0 z-40 bg-slate-200">
       <!-- navbar starts -->
-      <div class="navbar bg-base-100">
+      <div
+        class="navbar bg-base-100 flex flex-col sm:flex sm:flex-row text-center"
+      >
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -36,11 +38,13 @@
             <ul
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              
-            </ul>
+            ></ul>
           </div>
-          <a class="btn btn-ghost text-xl bg-blue-600 text-white" onclick="window.location.href = 'faq.html'">Blog</a>
+          <a
+            class="btn btn-ghost text-xl bg-blue-600 text-white"
+            onclick="window.location.href = 'faq.html'"
+            >Blog</a
+          >
         </div>
         <div class="navbar-center lg:flex">
           <img src="./images/logo.png" alt="" />
@@ -54,7 +58,9 @@
       <!-- navbar ends -->
 
       <!--header center buttons start -->
-      <header class="flex justify-center mt-10 gap-4 pb-10">
+      <header
+        class="flex justify-center mt-10 gap-4 pb-10 flex flex-col sm:flex sm:flex-row text-center"
+      >
         <button id="main-donation-btn" class="btn btn-success">Donation</button>
         <button id="donation-history-btn" class="btn btn-active">
           History
@@ -67,7 +73,7 @@
     <main id="main-section" class="mt-1 active">
       <!-- card-1 start-->
       <div
-        class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
+        class="card card-side bg-base-100 shadow-xl justify-between flex flex-colmt-10 sm:flex sm:flex-row"
       >
         <div>
           <img src="./images/noakhali.png" alt="" />
@@ -82,7 +88,7 @@
               Donate for Flood at <span id="nokhali-donation">Noakhali</span> ,
               Bangladesh
             </h2>
-            <p >
+            <p>
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
               supplies and to those affected by this disaster. Every
@@ -110,7 +116,7 @@
 
       <!-- card-2 start-->
       <div
-        class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
+        class="card card-side bg-base-100 shadow-xl flex flex-col sm:flex sm:flex-row justify-between mt-10"
       >
         <div>
           <img src="./images/feni.png" alt="" />
@@ -154,7 +160,7 @@
 
       <!-- card-3 start-->
       <div
-        class="card card-side bg-base-100 shadow-xl flex justify-between mt-10"
+        class="card card-side bg-base-100 shadow-xl justify-between mt-10 flex flex-col sm:flex sm:flex-row"
       >
         <div>
           <img src="./images/quota-protest.png" alt="" />
@@ -200,12 +206,10 @@
     <!--------- cards ------------->
     <!-- history section -->
     <section id="history-section-details" class="hidden">
-        <h1>Donation History</h1>
-        <div id="donation-container">
-
-        </div>
+      <h1>Donation History</h1>
+      <div id="donation-container"></div>
     </section>
-     <!-- history section -->
+    <!-- history section -->
 
     <!-- js files -->
     <script src="./js/home.js"></script>
