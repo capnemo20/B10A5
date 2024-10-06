@@ -14,14 +14,8 @@ function getDateTime() {
   return now.toLocaleString();
 }
 
-// function openModal(id){
-//     const modalForAddingMoney = document.getElementById(id);
-// }
 
-// function showHistoryById(id){
-//     document.getElementById("donation-history-btn").classList.add("active");
-//     document.getElementById("main-donation-btn").classList.add("active");
-//     document.getElementById("main-section").classList.add()
-
-//     // document.getElementById(id).classList.remove("hidden")
-// }
+function showModal(){
+    const openModal = document.getElementById("modalForAddingMoney");
+    return openModal;
+}

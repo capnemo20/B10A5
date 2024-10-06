@@ -21,25 +21,9 @@ document
       alert("Please enter a valid amount");
       return;
     } else {
+      
       // alert money added successfully
       alert("money added successfully");
-      // <------modal for adding money successfully start------->
-      //   const modalForAddingMoney = document.createElement("div");
-      //   modalForAddingMoney.classList.add("modal");
-      //   modalForAddingMoney.innerHTML = `
-      //    <div class="modal-box">
-      //         <h3 class="text-lg font-bold">Hello!</h3>
-      //         <p class="py-4">This modal works with a hidden checkbox!</p>
-      //         <div class="modal-action">
-      //             <label for="my_modal_6" class="btn">Close!</label>
-      // </div>
-
-      // `;
-      //   document
-      //     .getElementById("donate-noakhali-btn")
-      //     .appendChild(modalForAddingMoney);
-
-      // <------modal for adding money successfully end--------->
 
       const noakhaliBalance = getTextFieldValueById("total-noakhali-balance");
       const noakhaliNewBalance = addMoney + noakhaliBalance;
